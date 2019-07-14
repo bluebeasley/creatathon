@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic preparedness</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+        <div class="container" id="container">
+            <h1 id="header"></h1> <!-- Welcome -->
+            </div>
+        </div>
+    </header>
+	<header>
+        <div class="container" id="container">
+        	<a href="/index.html">Back</a>
+    	</div>
+    </header>
+	<a href="/index.html"></a>
+
+	<script type="text/javascript">
+		function function_name() {
+			$("#header").html($.i18n('hello', AntiXSS.sanitizeInput(data.name)));
+		}
+
+		function_name();
+	</script>
+
+</body>
+</html>

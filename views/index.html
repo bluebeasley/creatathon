@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello World</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/js/jquery-ui-1.12.1/jquery-ui.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.messagestore.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.language.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.parser.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.emitter.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="antixss.js" type="text/javascript"></script>
+
+    <script>
+        $( document ).ready(function() {
+            $.i18n().load( {
+                en: {
+                    "welcome": "Welcome.",
+                    "name": "name",
+                    "what_is_your_name": "What is your name?",
+                    "hello": "Keep going, $1!",
+                    "added_to_database": "Keep going, $1, I've added you to the database!",
+                    "database_contents": "Database contents: "
+                },
+                ja: {
+                    "welcome": "ようこそ。",
+                    "name": "名前",
+                    "what_is_your_name": "お名前を教えてください。",
+                    "hello": "こんにちは $1",
+                    "added_to_database": "こんにちは $1 さん、あなたをデータベースに追加しました。",
+                    "database_contents": "データベースの内容: "
+                }
+            } );
+            $('body').i18n();
+            $('#user_name').attr("placeholder", $.i18n('name') );
+        });
+        </script>
+</head>
+
+<body>
+    <header>
+        <div class="container" id="container">
+            <h1 data-i18n="welcome" id="header"></h1> <!-- Welcome -->
+            <div id="nameInput" class="input-group-lg center-block helloInput">
+                <p class="lead" data-i18n="what_is_your_name"></p>
+                <input id="user_name" type="text" class="form-control" aria-describedby="sizing-addon1" value="" />
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <div id="courses">
+            <!-- image sizes:960x360 -->
+            <div class="courseSelection" onclick="basic()">
+                <img class="courseimg" src="images/basic.jpg">
+                <h2 class="hovertext">Basic</h2>
+            </div>
+            <div class="courseSelection" onclick="pets()">
+                <img class="courseimg" src="images/pets.jpg">
+                <h2 class="hovertext">Pets</h2>
+            </div>
+            <div class="courseSelection" onclick="earthquake()">
+                <img class="courseimg" src="images/earthquake.jpg">
+                <h2 class="hovertext">Earthquake</h2>
+            </div>
+            <div class="courseSelection" onclick="flooding()">
+                <img class="courseimg" src="images/flooding.jpg">
+                <h2 class="hovertext">Flooding</h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="basic">
+        <div>
+            <input type="checkbox" id="water"><span class="checkboxes">Water</span><br>
+            <input type="checkbox" id="food"><span class="checkboxes">Extra food</span><br>
+            <input type="checkbox" id="water"><span class="checkboxes">Solar crank radio</span>
+        </div>
+         <div id="progressbar"></div><br>
+        <button onclick="home_basic()">back</button>
+    </div>
+
+    <div id="pets">
+        <div>
+            <input type="checkbox" id="water"><span class="checkboxes">Water</span><br>
+            <input type="checkbox" id="food"><span class="checkboxes">Extra food</span><br>
+            <input type="checkbox" id="treats"><span class="checkboxes">Extra treats</span>
+        </div>
+        <button onclick="home_pets()">back</button>
+    </div>
+
+    <div id="earthquake">
+        <div>
+            <input type="checkbox" id="items"><span class="checkboxes">Secure loose items</span><br>
+            <input type="checkbox" id="eq_escape"><span class="checkboxes">Know your escape route</span><br>
+            <input type="checkbox" id="eq_alters"><span class="checkboxes">Subscribe to local earthquake alerts</span>
+        </div>
+        <button onclick="home_earthquake()">back</button>
+    </div>
+
+    <div id="flooding">
+        <div>
+            <input type="checkbox" id="water"><span class="checkboxes">Waterproof document storage</span><br>
+            <input type="checkbox" id="fl_escape"><span class="checkboxes">Know your escape route</span><br>
+            <input type="checkbox" id="fl_alerts"><span class="checkboxes">Subscribe to local flood alerts</span>
+        </div>
+        <button onclick="home_flooding()">back</button>
+    </div>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

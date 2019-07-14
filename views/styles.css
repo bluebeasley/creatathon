@@ -1,0 +1,108 @@
+
+header {
+  background-color: white;
+}
+
+
+body {
+  margin-bottom: 60px;
+  width: 80%;
+  margin: auto;
+}
+
+.helloInput {
+  width: 300px;
+}
+
+#content {
+  display: none;
+  position: relative;
+  overflow: hidden
+}
+
+#courses {
+  position: relative;
+  overflow: hidden
+}
+
+.courseSelection {
+  width: 50%;
+  padding: 5px;
+  display: table;
+  float: left;
+}
+
+.courseimg {
+  width: 100%;
+  border-radius: 10px;
+  position: inherit;
+  vertical-align: inherit;
+}
+
+.courseSelection:hover .hovertext {
+  visibility: visible;
+  cursor: pointer;
+}
+
+.courseSelection:hover .courseimg {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.hovertext {
+  visibility: hidden;
+  margin-top: -3em;
+  text-align: center;
+  font-weight: bold;
+}
+
+#basic {
+  display: none;
+}
+
+#pets {
+  display: none;
+}
+
+#earthquake {
+  display: none;
+}
+
+#flooding {
+  display: none;
+}
+
+.checkboxes {
+  padding: 0.5em;
+  display: inline-block;
+}
+
+#progressbar {
+  height: 1em;
+  display: inline-block;
+  width: 100%;
+}
+
+.ui-progressbar-value {
+  height: 1em;
+}
+
+button {
+  background-color:#00a7fb;
+  border-radius:10px;
+  border:1px solid #008efa;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:1em;
+  padding:0.5em 1em;
+  text-decoration:none;
+}
+button:hover {
+  background-color:#008efa;
+}
+button:active {
+  position:relative;
+  /*top:1px;*/
+}
+
